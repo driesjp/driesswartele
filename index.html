@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>driesswartele.com</title>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; }
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400&display=swap');
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #0D0D0D;
+      color: #DDE3E9;
+      min-height: 100vh;
+      padding: 2rem;
+      line-height: 1.6;
+      transition: background-color 3s ease;
+    }
+
+    h1 {
+      font-weight: 300;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      margin-bottom: 1rem;
+      opacity: 0.95;
+      animation: subtleGlow 3s infinite alternate;
+      text-align: center;
+    }
+
+    h2 {
+      font-weight: 300;
+      font-size: 2rem;
+      margin-top: 3rem;
+      margin-bottom: 1rem;
+      text-align: center;
+    }
+
+    p, li {
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #d9dfe4;
+      max-width: 700px;
+      margin: 0.5rem auto;
+      opacity: 0.85;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      text-decoration: none;
+      font-weight: 300;
+      color: #DDE3E9;
+      opacity: 0.9;
+      transition: opacity 0.3s ease;
+    }
+
+    nav a:hover { opacity: 0.6; }
+
+    .projects {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-top: 1rem;
+    }
+
+    .project {
+      background-color: #1A1A1A;
+      padding: 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .project:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 0 20px rgba(200,200,200,0.2);
+    }
+
+    .project-actions {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+
+    .project-btn {
+      display: inline-block;
+      padding: 0.2rem 1.4rem;
+      margin: 10px;
+      background-color: #0D0D0D;
+      color: #DDE3E9;
+      border: 2px solid #DDE3E9;
+      text-decoration: none;
+      font-weight: 400;
+      border-radius: 6px;
+      transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+    }
+
+    .project-btn:hover {
+      background-color: #DDE3E9;
+      color: #0D0D0D;
+      transform: translateY(-2px);
+    }
+
+    .tech-tags {
+      margin-top: 0.5rem;
+    }
+
+    .tech-tag {
+      display: inline-block;
+      background: #2A2A2A;
+      padding: 0.25rem 0.6rem;
+      margin-right: 0.3rem;
+      border-radius: 5px;
+      font-size: 0.9rem;
+      color: #A8B8C4;
+    }
+
+
+    .contact-btn, .contact-link {
+      font-weight: 300;
+      font-size: 1.1rem;
+      color: #a8a9aa;
+      background: transparent;
+      text-decoration: underline;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .contact-btn:hover, .contact-link:hover { opacity: 0.6; }
+
+    footer {
+      margin-top: 3rem;
+      text-align: center;
+      opacity: 0.4;
+      font-size: 0.8rem;
+    }
+
+    @keyframes subtleGlow {
+      0%,100% { opacity:0.95; }
+      50% { opacity:0.88; }
+    }
+
+    @media (max-width: 600px) {
+      h1 { font-size: 2rem; }
+      h2 { font-size: 1.5rem; }
+      p, li { font-size: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+<h1>driesswartele.com</h1>
+
+<p>Personal software projects, experiments, and open-source contributions.  
+A minimal space to share what I build and link to my GitHub.</p>
+
+<nav>
+  <a href="#projects">Projects</a>
+  <a href="#contact">Contact</a>
+  <a href="https://github.com/driesjp" target="_blank" rel="noopener">GitHub</a>
+</nav>
+
+<h2 id="projects">Projects</h2>
+
+<div class="projects">
+  <div class="project">
+    <h3>Akai EWI 5000 Practice</h3>
+    <p>
+      <img src="app/ewi/akai_ewi_5000.png" alt="Akai EWI 5000 Practice" style="max-width:100%;"><br><br>
+      Practice any fingering on the Akai EWI 5000 with MIDI input.<br>
+      Connect your EWI via USB, select the device from MIDI input, and see what note you're playing.
+    </p>
+    <p>
+      <a href="app/ewi/ewi_5000.zip" class="project-btn">Download</a>
+    </p>
+    <div class="tech-tags">
+      <span class="tech-tag">Windows 10+</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Guitar Notes Mapper</h3>
+    <p>
+      <img src="app/gnm/gnmo.gif" alt="Guitar Notes Mapper" style="max-width:100%;"><br><br>
+      A versatile application designed to help visualize chord notes across the guitar neck.<br>
+      Perfect for creative exploration, inspiring guitarists to go beyond standard chord shapes.<br>
+      Can display selected notes—or all notes—on the fretboard for easy reference.
+    </p>
+    <p>
+      <a href="app/gnm/Guitar_notes_mapper.zip" class="project-btn">Download</a>
+    </p>
+    <div class="tech-tags">
+      <span class="tech-tag">Windows 10+</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Practice Hiragana and Katakana</h3>
+    <p>
+      A little game to practice your hiragana and katakana online.<br>
+      Click the correct answer or use numpad 1-3.
+    </p>
+    <p>
+      <a href="kana.html" target="_blank" class="project-btn">Open</a>
+    </p>
+    <div class="tech-tags">
+      <span class="tech-tag">Online</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>LearnCSV</h3>
+    <p>
+      An altered version of the hiragana and katakana game where you can upload your own CSV files to practice anything you'd like.
+    </p>
+    <p>
+      <a href="learncsv.html" target="_blank" class="project-btn">Open</a>
+    </p>
+    <div class="tech-tags">
+      <span class="tech-tag">Online</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>Japanese Number Dictation</h3>
+    <p>
+      Sharpen your Japanese number skills: listen and type what you hear.
+    </p>
+    <p>
+      <a href="jnd.html" target="_blank" class="project-btn">Open</a>
+    </p>
+    <div class="tech-tags">
+      <span class="tech-tag">Online</span>
+    </div>
+  </div>
+
+  <div class="project">
+    <h3>GitHub</h3>
+    <p>
+      Various projects on DSP, automation, and more.
+    </p>
+    <p>
+      <a href="https://github.com/driesjp" target="_blank" class="project-btn">Visit</a>
+    </p>
+    <div class="tech-tags">
+      <span class="tech-tag">C</span>
+      <span class="tech-tag">C#</span>
+      <span class="tech-tag">C++</span>
+    </div>
+  </div>
+</div>
+
+
+
+<h2 id="contact">Contact</h2>
+<p>For inquiries:</p>
+<p id="email-wrapper">
+  <button class="contact-btn">reveal email</button>
+</p>
+
+<footer>© 2017-<script>document.write(new Date().getFullYear());</script> driesswartele.com</footer>
+
+<script>
+  let start = performance.now();
+  function animateBackground() {
+    const t = (performance.now() - start) / 50000;
+    const alpha = 0.94 + Math.sin(t) * 0.02;
+    document.body.style.backgroundColor = `rgba(13,13,13,${alpha})`;
+    requestAnimationFrame(animateBackground);
+  }
+  animateBackground();
+
+  const scrambled = ["h","e","l","l","o","@","d","r","i","e","s",".","j","p"];
+  const mapping = [0,1,2,3,4,5,6,7,8,9,10,11,12,13];
+  function revealEmail(){
+    const email = mapping.map(i => scrambled[i]).join("");
+    const wrapper = document.getElementById("email-wrapper");
+    wrapper.innerHTML = `<a class="contact-link" href="mailto:${email}">${email}</a>`;
+  }
+  document.querySelector(".contact-btn").addEventListener("click", revealEmail);
+</script>
+
+</body>
+</html>
